@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"square/yuza"
 	"time"
 )
@@ -187,6 +188,16 @@ func myslice() {
 	fmt.Println("array uzunligi l = ", len(slicearry))
 }
 
+// slice dan elemntlarni ajratib olish
+func catslice() {
+	catslarray := []string{"olma", "anor", "nok", "bodring"}
+	mycatslarry := catslarray[1:3]
+	fmt.Println(mycatslarry)
+	sort.Strings(catslarray)
+	fmt.Println()
+	fmt.Println(catslarray)
+}
+
 func main() {
 
 	fmt.Println(yuza.Yuzax(10, 5))
@@ -204,4 +215,5 @@ func main() {
 	charray()
 	xarray()
 	myslice()
+	catslice()
 }
