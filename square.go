@@ -198,6 +198,58 @@ func catslice() {
 	fmt.Println(catslarray)
 }
 
+//map turi map[KeyType]ValueType shu strukturada ishlaydi
+
+func mapfunc() {
+	statuses := make(map[string]int)
+	statuses["online"] = 1
+	statuses["offline"] = 2
+	statuses["joined"] = 3
+	statuses["left"] = 4
+
+	//mapdan ma'lumot o'qish
+	var onlineStatus = statuses["online"]
+	fmt.Println()
+
+	delete(statuses, "online")
+	//var onlineStatus = statuses["offline"]
+	fmt.Println(onlineStatus)
+}
+func forloop() {
+	for i := 0; i < 8; i++ {
+		fmt.Println("Bu for loopdan odatiy xolda ishlatish i = ", i)
+	}
+	// for {
+	// 	fmt.Println("Alhamdulillah " + strconv.Itoa(time.Now().Second()))
+	// 	time.Sleep(1 * time.Second)
+	// }
+
+	K := 1
+	for K < 10 {
+		fmt.Println("K = ", K)
+		K++
+	}
+}
+
+func arryfor() {
+	fmt.Println()
+	forarray := []string{"nol", "bir", "ikki", "uch", "to'rt"}
+	for index, value := range forarray {
+
+		fmt.Println(index, value)
+	}
+	fmt.Println()
+	formap := map[int]string{
+		1: "Kompyuter",
+		2: "Notebook",
+		3: "Netbook",
+		4: "Phone"}
+
+	for key, value := range formap {
+		fmt.Println(key, value)
+	}
+}
+
 func main() {
 
 	fmt.Println(yuza.Yuzax(10, 5))
@@ -216,4 +268,7 @@ func main() {
 	xarray()
 	myslice()
 	catslice()
+	mapfunc()
+	forloop()
+	arryfor()
 }
